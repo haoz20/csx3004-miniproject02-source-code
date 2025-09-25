@@ -1,13 +1,13 @@
-// Post-order traversal implementation
-public class PostOrder{
-    // Recursive post-order traversal with printing
-    void printPostorder(Node node) {
+// In-order traversal implementation
+public class InOrder {
+    // Recursive pre-order traversal with printing
+    void printInorder(Node node) {
         if (node == null)               // Base case: null node
             return;
 
-        printPostorder(node.left);      // Traverse left subtree
-        printPostorder(node.right);     // Traverse right subtree
+        printInorder(node.left);      // Traverse left subtree
         System.out.print(node.data + " ");  // Print current node
+        printInorder(node.right);     // Traverse right subtree
     }
 
     // Main method creates tree and executes traversal
@@ -20,8 +20,8 @@ public class PostOrder{
         root.left.right = new Node(5);
         root.right.right = new Node(6);
         
-        // Output: 4 5 2 6 3 1
-        PostOrder tree = new PostOrder();
-        tree.printPostorder(root);
+        // Output: 4 2 5 1 3 6
+        InOrder tree = new InOrder();
+        tree.printInorder(root);
     }
 }

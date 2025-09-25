@@ -1,3 +1,5 @@
+% Post Order Traversal in Prolog
+
 % Base case: empty tree returns empty list
 postorder(nil, []).
 
@@ -11,4 +13,6 @@ postorder(node(Left, Value, Right), Result) :-
 % Example tree structure: node(Left, Value, Right)
 % Tree: 1 with children 2(4,5) and 3(6)
 % Expected result: [4, 5, 2, 6, 3, 1]
-postorder(node(node(node(nil, 4, nil), 2, node(nil, 5, nil)), 1, node(nil, 3, node(nil, 6, nil))), Result).
+
+% run this query to see result
+% postorder(node(node(node(nil, 4, nil), 2, node(nil, 5, nil)), 1, node(nil, 3, node(nil, 6, nil))), Result).

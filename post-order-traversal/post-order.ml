@@ -1,3 +1,4 @@
+(* Post-order traversal in Standard ML *)
 (* Binary tree data type: Empty or Node(left, value, right) *)
 datatype 'data tree = Empty | Node of 'data tree * 'data * 'data tree;
 
